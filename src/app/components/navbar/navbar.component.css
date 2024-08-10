@@ -1,0 +1,10 @@
+
+.active{
+  color: #4ade80;
+  border-bottom: solid 3px #4ade80;
+  transition: 3ms ;
+}
+.show {
+  max-height: 400px;
+  opacity: 1;
+}

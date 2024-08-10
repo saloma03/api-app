@@ -1,0 +1,48 @@
+<nav class="fixed top-0 right-0 pt-2 left-0 z-20 bg-gray-100 ">
+
+  <div class="container w-11/12 mx-auto px-10 transition-all duration-500 bg-gray-100" [class.py-5]="isScrolled" [class.py-10]="isScrolled == false" >
+    <div class="flex justify-between items-center">
+        <div class="logo font-bold text-4xl uppercase">
+          <a routerLink="home">
+            <img src="../../assets/logo.png" class="w-full" alt="">
+          </a>
+        </div>
+        <div>
+          <ul class="lg:flex gap-4 font-bold text-lg capitalize hidden ">
+            <li>
+              <a routerLink="home"  routerLinkActive="active" >
+                Home
+              </a>
+            </li>
+
+            <li><a routerLink="shop" routerLinkActive="active"> shop</a></li>
+            <li><a routerLink="blog" routerLinkActive="active"> blog</a></li>
+            <li><a routerLink="about" routerLinkActive="active"> about</a></li>
+            <li><a routerLink="contact" routerLinkActive="active"> contact</a></li>
+          </ul>
+
+          <div (click)="toggleMobileList()" class=" cursor-pointer lg:hidden md:block">
+            <i class="fa-solid fa-bars text-3xl border-2 border-solid border-gray-500 rounded-lg p-1"[class.active]="mobileVisibility" ></i>
+          </div>
+        </div>
+    </div>
+
+  </div>
+  <div class="container w-11/12 mx-auto  px-10 bg-gray-100">
+    <div [class.show]="mobileVisibility" class="max-h-0 transition-all duration-300 opacity-0 lg:hidden ">
+      <ul class=" flex-col gap-4 font-bold text-lg flex py-5 mobile-list lg:hidden uppercase">
+        <li>
+          <a routerLink="home"  routerLinkActive="active" >
+            Home
+          </a>
+        </li>
+
+        <li><a routerLink="shop" routerLinkActive="active"> shop</a></li>
+        <li><a routerLink="blog" routerLinkActive="active"> blog</a></li>
+        <li><a routerLink="about" routerLinkActive="active"> about</a></li>
+        <li><a routerLink="contact" routerLinkActive="active"> contact</a></li>
+  </ul>
+    </div>
+  </div>
+
+</nav>

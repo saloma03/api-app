@@ -1,0 +1,24 @@
+<div class="bg-gray-100">
+  <div class="flex flex-col justify-center items-center py-3">
+    <h2 class="text-5xl text-center font-bold">Featured Product</h2>
+    <span class="text-center text-gray-500 capitalize pt-2">summer collection new modern design</span>
+  </div>
+  <div class="flex justify-center items-center">
+    <ul class="list-none flex gap-2">
+        <li class=" cursor-pointer text-gray-400 px-1 font-bold text-lg"   [ngClass]="{'text-black': chosenCategory == 'men\'s clothing'}"
+        (click) = "chosenCategory = 'men\'s clothing'">
+          men's Clothes
+        </li>
+        <li class=" cursor-pointer text-gray-400 px-1 font-bold text-lg" [ngClass]="{'text-black': chosenCategory == 'women\'s clothing'}" (click) = "chosenCategory = 'women\'s clothing'">
+          women's Clothes
+        </li>
+        <li class=" cursor-pointer text-gray-400 px-1 font-bold text-lg" [ngClass]="{'text-black': chosenCategory == 'jewelery'}" (click)="chosenCategory = 'jewelery'">
+          jewelery
+        </li>
+        <li class=" cursor-pointer text-gray-400 px-1 font-bold text-lg" [ngClass]="{'text-black': chosenCategory == 'electronics'}" (click)="chosenCategory = 'electronics'">
+          Electronics
+        </li>
+    </ul>
+  </div>
+  <app-productlist [category]="chosenCategory"></app-productlist>
+</div>
